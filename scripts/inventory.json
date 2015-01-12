@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Blah Wine",
+    "color": "Red",
+    "type": "Merlot",
+    "vintage": "1997"
+  },
+  {
+    "name": "Blah Wine",
+    "color": "Red",
+    "type": "Merlot",
+    "vintage": "1998"
+  }
+]

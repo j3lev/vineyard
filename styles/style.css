@@ -1,0 +1,13 @@
+body {
+	background: url(../images/old_map/old_map.png);
+}
+
+h1 {
+	font-weight: bold;
+
+}
+
+#header {
+	background: #2e6da4;
+	color: white;
+}

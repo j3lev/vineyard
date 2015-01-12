@@ -1,0 +1,20 @@
+{
+  "name": "vineyard",
+  "version": "0.0.0",
+  "authors": [
+    "Joseph Levenson"
+  ],
+  "description": "vineyard inventory",
+  "main": "index.htm",
+  "license": "MIT",
+  "homepage": "index.htm",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/",
+    "test",
+    "tests"
+  ]
+}
