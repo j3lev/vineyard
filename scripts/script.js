@@ -6,7 +6,12 @@ $.getJSON('scripts/inventory.json', function(response) {
 		document.getElementById("wines-list").appendChild(wine_col);
 
 		var wine_panel = document.createElement("div");
-		wine_panel.className = "panel panel-primary";
+		if (response[i].color.toLowerCase() == "white") {
+			wine_panel.className = "panel panel-warning";
+		}
+		else {
+			wine_panel.className = "panel panel-danger";
+		}
 		document.getElementById("wine" + i).appendChild(wine_panel);
 
 		var wine_title = document.createElement("div");

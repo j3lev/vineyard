@@ -10,5 +10,29 @@
     "color": "White",
     "type": "Zinfandel",
     "vintage": "1970"
+  },
+  {
+    "name": "Good Stuff",
+    "color": "Red",
+    "type": "Merlot",
+    "vintage": "1997"
+  },
+  {
+    "name": "Mad Dog 20 20",
+    "color": "red",
+    "type": "Merlot",
+    "vintage": "1997"
+  },
+  {
+    "name": "Arbor Mist",
+    "color": "white",
+    "type": "Merlot",
+    "vintage": "1997"
+  },
+  {
+    "name": "Real Good Wine",
+    "color": "white",
+    "type": "Merlot",
+    "vintage": "1997"
   }
 ]
