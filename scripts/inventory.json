@@ -1,14 +1,14 @@
 [
   {
-    "name": "Blah Wine",
+    "name": "Good Wine",
     "color": "Red",
     "type": "Merlot",
     "vintage": "1997"
   },
   {
-    "name": "Blah Wine",
-    "color": "Red",
-    "type": "Merlot",
-    "vintage": "1998"
+    "name": "Even Better Wine",
+    "color": "White",
+    "type": "Zinfandel",
+    "vintage": "1970"
   }
 ]
