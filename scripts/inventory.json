@@ -7,7 +7,7 @@
     "Vintage": "1997",
     "Characteristics": {
       "Acidity": 70,
-      "Sweetness": 30,
+      "Sweet": 30,
       "Fruit": 15,
       "Body": 40
     } 
@@ -20,7 +20,7 @@
     "Vintage": "1970",
     "Characteristics": {
       "Acidity": 25,
-      "Sweetness": 35,
+      "Sweet": 35,
       "Fruit": 40,
       "Body": 12
     }
@@ -33,7 +33,7 @@
     "ABV": "11%",
     "Characteristics": {
       "Acidity": 20,
-      "Sweetness": 18,
+      "Sweet": 18,
       "Fruit": 14,
       "Body": 11
     }
@@ -46,7 +46,7 @@
     "ABV": "17%",
     "Characteristics": {
       "Acidity": 14,
-      "Sweetness": 10,
+      "Sweet": 10,
       "Fruit": 30,
       "Body": 50
     }
@@ -59,7 +59,7 @@
     "ABV": "10%",
     "Characteristics": {
       "Acidity": 10,
-      "Sweetness": 20,
+      "Sweet": 20,
       "Fruit": 40,
       "Body": 90
     }
@@ -72,7 +72,7 @@
     "ABV": "10.5%",
     "Characteristics": {
       "Acidity": 25,
-      "Sweetness": 30,
+      "Sweet": 30,
       "Fruit": 20,
       "Body": 60
     }

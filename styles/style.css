@@ -1,13 +1,22 @@
 body {
-	background: url(../images/old_map/old_map.png);
+	background: url(../images/vineyard-wallpaper.jpg) no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
 }
 
 h1 {
 	font-weight: bold;
-
 }
 
 #header {
-	background: #2e6da4;
-	color: white;
+	background: rgba(255, 255, 255, 0.8);
+	color: black;
 }
+
+.list-group-item {
+	background: rgba(255, 255, 255, 0.8);
+}
+ .panel-danger,
+ .panel-warning {
+ 	background: rgba(255, 255, 255, 0.8);
+ }
