@@ -1,38 +1,80 @@
 [
   {
-    "name": "Good Wine",
-    "color": "Red",
-    "type": "Merlot",
-    "vintage": "1997"
+    "Name": "Good Wine",
+    "Type": "Merlot",
+    "Color": "Red",
+    "ABV": "20%",
+    "Vintage": "1997",
+    "Characteristics": {
+      "Acidity": 70,
+      "Sweetness": 30,
+      "Fruit": 15,
+      "Body": 40
+    } 
   },
   {
-    "name": "Even Better Wine",
-    "color": "White",
-    "type": "Zinfandel",
-    "vintage": "1970"
+    "Name": "Even Better Wine",
+    "Color": "White",
+    "Type": "Zinfandel",
+    "ABV": "12%",
+    "Vintage": "1970",
+    "Characteristics": {
+      "Acidity": 25,
+      "Sweetness": 35,
+      "Fruit": 40,
+      "Body": 12
+    }
   },
   {
-    "name": "Good Stuff",
-    "color": "Red",
-    "type": "Merlot",
-    "vintage": "1997"
+    "Name": "Good Stuff",
+    "Color": "Red",
+    "Type": "Merlot",
+    "Vintage": "1997",
+    "ABV": "11%",
+    "Characteristics": {
+      "Acidity": 20,
+      "Sweetness": 18,
+      "Fruit": 14,
+      "Body": 11
+    }
   },
   {
-    "name": "Mad Dog 20 20",
-    "color": "red",
-    "type": "Merlot",
-    "vintage": "1997"
+    "Name": "Mad Dog 20 20",
+    "Color": "red",
+    "Type": "Merlot",
+    "Vintage": "1997",
+    "ABV": "17%",
+    "Characteristics": {
+      "Acidity": 14,
+      "Sweetness": 10,
+      "Fruit": 30,
+      "Body": 50
+    }
   },
   {
-    "name": "Arbor Mist",
-    "color": "white",
-    "type": "Merlot",
-    "vintage": "1997"
+    "Name": "Arbor Mist",
+    "Color": "white",
+    "Type": "Merlot",
+    "Vintage": "1997",
+    "ABV": "10%",
+    "Characteristics": {
+      "Acidity": 10,
+      "Sweetness": 20,
+      "Fruit": 40,
+      "Body": 90
+    }
   },
   {
-    "name": "Real Good Wine",
-    "color": "white",
-    "type": "Merlot",
-    "vintage": "1997"
+    "Name": "Real Good Wine",
+    "Color": "white",
+    "Type": "Merlot",
+    "Vintage": "1997",
+    "ABV": "10.5%",
+    "Characteristics": {
+      "Acidity": 25,
+      "Sweetness": 30,
+      "Fruit": 20,
+      "Body": 60
+    }
   }
 ]
