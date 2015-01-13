@@ -1,79 +1,79 @@
 [
   {
-    "Name": "Good Wine",
-    "Type": "Merlot",
+    "Name": "Dow's Vintage Port",
+    "Type": "Port",
     "Color": "Red",
-    "ABV": "20%",
-    "Vintage": "1997",
+    "ABV": "14.5%",
+    "Vintage": "2011",
     "Characteristics": {
-      "Acidity": 70,
-      "Sweet": 30,
-      "Fruit": 15,
-      "Body": 40
+      "Acidity": 25,
+      "Sweet": 90,
+      "Fruit": 80,
+      "Body": 70
     } 
   },
   {
-    "Name": "Even Better Wine",
-    "Color": "White",
-    "Type": "Zinfandel",
+    "Name": "Shiraz McLaren Vale Carnival of Love",
+    "Color": "Red",
+    "Type": "Shiraz",
     "ABV": "12%",
-    "Vintage": "1970",
+    "Vintage": "2012",
     "Characteristics": {
-      "Acidity": 25,
+      "Acidity": 30,
       "Sweet": 35,
-      "Fruit": 40,
-      "Body": 12
+      "Fruit": 70,
+      "Body": 90
     }
   },
   {
-    "Name": "Good Stuff",
+    "Name": "Douro Chryseia",
     "Color": "Red",
-    "Type": "Merlot",
-    "Vintage": "1997",
-    "ABV": "11%",
+    "Type": "Port",
+    "Vintage": "2011",
+    "ABV": "13%",
     "Characteristics": {
       "Acidity": 20,
-      "Sweet": 18,
-      "Fruit": 14,
-      "Body": 11
+      "Sweet": 90,
+      "Fruit": 85,
+      "Body": 60
     }
   },
   {
-    "Name": "Mad Dog 20 20",
-    "Color": "red",
-    "Type": "Merlot",
-    "Vintage": "1997",
+    "Name": "Chardonnay Margaret River Art Series",
+    "Color": "white",
+    "Type": "Chardonnay",
+    "Vintage": "2011",
     "ABV": "17%",
     "Characteristics": {
-      "Acidity": 14,
-      "Sweet": 10,
+      "Acidity": 40,
+      "Sweet": 35,
       "Fruit": 30,
       "Body": 50
     }
   },
   {
-    "Name": "Arbor Mist",
-    "Color": "white",
-    "Type": "Merlot",
-    "Vintage": "1997",
-    "ABV": "10%",
+    "Name": "Chianti Classico San Lorenzo Gran Selezione",
+    "Color": "red",
+    "Type": "Merlot, Sangiovese, Malvasia Nera Blend",
+    "Vintage": "2010",
+    "ABV": "15%",
     "Characteristics": {
-      "Acidity": 10,
-      "Sweet": 20,
-      "Fruit": 40,
-      "Body": 90
+      "Acidity": 60,
+      "Sweet": 25,
+      "Fruit": 25,
+      "Body": 70
     }
   },
   {
-    "Name": "Real Good Wine",
+    "Name": "Estancia Pinnacles Ranches",
     "Color": "white",
-    "Type": "Merlot",
-    "Vintage": "1997",
-    "ABV": "10.5%",
+    "Type": "Sauvignon",
+    "Vintage": "2006",
+    "ABV": "12.5%",
     "Characteristics": {
-      "Acidity": 25,
-      "Sweet": 30,
-      "Fruit": 20,
+      "Acidity": 20,
+      "Sweet": 40,
+      "Fruit": 70,
       "Body": 60
     }
   }
