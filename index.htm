@@ -11,12 +11,36 @@
 	<body>
 		<div class="container-fluid" id="wrapper">
 			<div class="clearfix">&nbsp;</div>
-			<div class="jumbotron" id="header">
-				<h1>Vineyard Inventory</h1>
-				<p>Browse our selection of fine wines from across the world. These are guarenteed to satisfy even the most sophisticated of palettes.</p>
+			<div class="row" id="header">
+				<div class="jumbotron" >
+					<h1>Vineyard Inventory</h1>
+					<p>Browse our selection of fine wines from across the world. These are guarenteed to satisfy even the most sophisticated of palettes.</p>
+				</div>
 			</div>
+			<div class="clearfix">&nbsp;</div>
 			<div class="row" id="wines-list">
 				<!--JSON Data inserted here-->
+			</div>
+		</div>
+		<div class="modal fade" id="edit-modal">
+			<div class="modal-dialog">
+				<div class="modal-content" class="form-horizontal">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+						<span>&times;</span>
+						</button>
+						<h2 class="modal-title" id="myModalLabel">Edit Wine</h2>
+					</div>
+					<div class="modal-body">
+						<form action="">
+							
+								<div id="edit-form-container" class="row">
+									
+								</div>
+							
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 		<script src="scripts/script.js"></script>

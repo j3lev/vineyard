@@ -3,8 +3,8 @@
     "Name": "Dow's Vintage Port",
     "Type": "Port",
     "Color": "Red",
-    "ABV": "14.5%",
     "Vintage": "2011",
+    "ABV": "14.5%",
     "Characteristics": {
       "Acidity": 25,
       "Sweet": 90,
@@ -16,8 +16,8 @@
     "Name": "Shiraz McLaren Vale Carnival of Love",
     "Color": "Red",
     "Type": "Shiraz",
-    "ABV": "12%",
     "Vintage": "2012",
+    "ABV": "12%",
     "Characteristics": {
       "Acidity": 30,
       "Sweet": 35,
