@@ -34,29 +34,35 @@ $.getJSON('scripts/inventory.json', function(response) {
 			id_index = wine_id[4];
 			$("#edit-form-container").empty();
 			for (attribute in response[id_index]) {
+				
 				var form_field = document.createElement("input");
 				var form_field_container = document.createElement("div");
 				var field_label = document.createElement("label");
+					
 				field_label.innerText = attribute;
 				form_field_container.appendChild(field_label);
-				form_field.className = "form-control";
+				form_field.className = "form-control field";
 				form_field.type = "text";
-				form_field.id = "input-" + attribute;
+				form_field.id = wine_id + "-input-" + attribute;
 				form_field.value = response[id_index][attribute];
-				
 				form_field_container.className = "form-group col-xs-12";
 				form_field_container.appendChild(form_field);
 				document.querySelector("#edit-form-container").appendChild(form_field_container);
-
 			}
+
+			
+
 		});
-				
+		
+		
 
 		text = document.createTextNode(response[i].Name);
 		wine_title_container.insertBefore(text, edit_btn);
 		document.getElementById(wine_col.id).getElementsByClassName("panel")[0].appendChild(wine_title_container);
 
 		for (var attribute in response[i]) {
+			
+
 			if (attribute == "Color" || attribute == "Name") continue;
 			var container = document.createElement("div");
 			container.className = "list-group-item";
@@ -68,6 +74,7 @@ $.getJSON('scripts/inventory.json', function(response) {
 			text = document.createTextNode(response[i][attribute]);
 			container.appendChild(heading);
 			if (attribute == "Characteristics") {
+
 				for (var characteristic in response[i][attribute]) {
 					var val = response[i][attribute][characteristic];
 					var bar_container = document.createElement("div");
@@ -92,6 +99,15 @@ $.getJSON('scripts/inventory.json', function(response) {
 		//response[index].Name = "Tweezer";
 		//container.nodeValue = response[index].Name;
 	}
+
+	document.querySelector("#edit-submit").addEventListener("click", function() {
+		num_of_fields = document.getElementsByClassName("field").length;
+		console.clear();
+		for (var x = 0; x < num_of_fields; x++ ) {
+			console.log(document.getElementsByClassName("field")[x].value);
+		}
+		
+	});		
 
 });
 
