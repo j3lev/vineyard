@@ -2,43 +2,52 @@ $.getJSON('scripts/inventory.json', function(response) {
 	
 	for (i = 0; i < response.length; i++) {
 		
+		//SETS COLUMN SIZE
 		wine_col = document.createElement("div");
 		wine_col.className = "col-xs-12 col-md-6 col-lg-4";
 		wine_col.id = "wine" + i;
 		document.getElementById("wines-list").appendChild(wine_col);
 
 		var wine_panel = document.createElement("div");
+		
+		//DETERMINES PANEL COLOR ACCORDING TO WINE COLOR JSON PROPERTY
 		if (response[i].Color.toLowerCase() == "white") wine_panel.className = "panel panel-warning";
 		else wine_panel.className = "panel panel-danger";
 				
 		document.getElementById(wine_col.id).appendChild(wine_panel);
-
 		var wine_title_container = document.createElement("div");
+		var wine_name = document.createElement("span");
+		var clearfix = document.createElement("div");
+		var wine_name_text = document.createElement("span");
+		wine_name_text.innerText = response[i].Name;
 		wine_title_container.className = "panel-heading";
-		wine_title_container.id = wine_col.id + "-title";
+		wine_name.id = wine_col.id + "-Name";
+		clearfix.className = "clearfix";
+		clearfix.innerText = " ";
 		
 		var edit_btn = document.createElement("button");
 		edit_btn.className = "btn btn-default glyphicon glyphicon-edit pull-right edit-btn";
 		edit_btn.type = "button";
-		wine_title_container.appendChild(edit_btn);
-		var clearfix = document.createElement("div");
-		clearfix.className = "clearfix";
-		var clearfixspace = document.createTextNode(" ");
-		clearfix.appendChild(clearfixspace);
-		wine_title_container.appendChild(clearfix);
 		edit_btn.setAttribute("data-toggle", "modal");
 		edit_btn.setAttribute("data-target", "#edit-modal");
 		
+		wine_name.appendChild(wine_name_text);
+		wine_title_container.appendChild(edit_btn);
+		wine_title_container.appendChild(wine_name);
+		wine_title_container.appendChild(clearfix);
+		
+		wine_panel.appendChild(wine_title_container);
+
 		edit_btn.addEventListener("click", function(){
 			wine_id = this.parentNode.parentNode.parentNode.id; //gets current wine ID from great grandparents
 			id_index = wine_id[4];
+			//CLEARS EXISTING FORM DATA
 			$("#edit-form-container").empty();
+			//GENERATES FORM IN MODAL ON EDIT BUTTON CLICK
 			for (attribute in response[id_index]) {
-				
 				var form_field = document.createElement("input");
 				var form_field_container = document.createElement("div");
 				var field_label = document.createElement("label");
-					
 				field_label.innerText = attribute;
 				form_field_container.appendChild(field_label);
 				form_field.className = "form-control field";
@@ -50,28 +59,24 @@ $.getJSON('scripts/inventory.json', function(response) {
 				document.querySelector("#edit-form-container").appendChild(form_field_container);
 			}
 
-			
-
 		});
 		
-		
-
-		text = document.createTextNode(response[i].Name);
-		wine_title_container.insertBefore(text, edit_btn);
-		document.getElementById(wine_col.id).getElementsByClassName("panel")[0].appendChild(wine_title_container);
-
 		for (var attribute in response[i]) {
 			
 
 			if (attribute == "Color" || attribute == "Name") continue;
+
 			var container = document.createElement("div");
 			container.className = "list-group-item";
+			
 			var heading = document.createElement("h4");
 			heading.className = "list-group-item-heading";
-			heading.id = wine_col.id + attribute;
+			
 			heading_text = document.createTextNode(attribute);
 			heading.appendChild(heading_text);
-			text = document.createTextNode(response[i][attribute]);
+			attr_val = document.createElement("span");
+			attr_val.id = wine_col.id + "-" + attribute;
+			attr_val.innerText = response[i][attribute];
 			container.appendChild(heading);
 			if (attribute == "Characteristics") {
 
@@ -88,7 +93,7 @@ $.getJSON('scripts/inventory.json', function(response) {
 					container.appendChild(bar_container);
 				}
 			}
-			else container.appendChild(text);
+			else container.appendChild(attr_val);
 			document.getElementById(wine_col.id).getElementsByClassName("panel")[0].appendChild(container);
 		}
 	}
@@ -101,13 +106,18 @@ $.getJSON('scripts/inventory.json', function(response) {
 	}
 
 	document.querySelector("#edit-submit").addEventListener("click", function() {
-		num_of_fields = document.getElementsByClassName("field").length;
-		console.clear();
-		for (var x = 0; x < num_of_fields; x++ ) {
-			console.log(document.getElementsByClassName("field")[x].value);
-		}
+		fields = document.getElementsByClassName("field");
 		
+		for (var i = 0; i < fields.length; i++ ) {
+			var panel_field = document.getElementsByClassName("field")[i];
+			var attribute = panel_field.id.substr(12);
+			var wineID = panel_field.id.substr(0, 5);
+			var wineIDint = parseInt(wineID[4]);
+			if (attribute == "Color" || attribute == "Characteristics") continue;
+			response[wineIDint][attribute] = fields[i].value;
+			document.querySelector("#" + wineID + "-" + attribute).innerText = fields[i].value;
+		}
+	
 	});		
 
 });
-
