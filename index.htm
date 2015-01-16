@@ -10,11 +10,12 @@
 	</head>
 	<body>
 		<div class="container-fluid" id="wrapper">
-			<div class="clearfix">&nbsp;</div>
+			
 			<div class="row" id="header">
 				<div class="jumbotron" >
 					<h1>Vineyard Inventory</h1>
 					<p>Browse our selection of fine wines from across the world. These are guarenteed to satisfy even the most sophisticated of palettes.</p>
+					<button class="btn btn-default glyphicon glyphicon-plus new-btn" id="create-new" type="button" data-toggle="modal" data-target="#new-modal"></button>
 				</div>
 			</div>
 			<div class="clearfix">&nbsp;</div>
@@ -26,7 +27,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content" class="form-horizontal">
 					<div class="modal-header">
-						<h2 class="modal-title" id="myModalLabel">Edit Wine</h2>
+						<h2 class="modal-title">Edit Wine</h2>
 					</div>
 					<div class="modal-body">
 						<form action="">
@@ -37,6 +38,25 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						<button type="button" class="btn btn-primary" data-dismiss="modal" id="edit-submit">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="new-modal">
+			<div class="modal-dialog">
+				<div class="modal-content" class="form-horizontal">
+					<div class="modal-header">
+						<h2 class="modal-title">Add New Wine</h2>
+					</div>
+					<div class="modal-body">
+						<form action="">
+							<div id="new-form-container" class="row">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Discard</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal" id="new-submit">Add New</button>
 					</div>
 				</div>
 			</div>
