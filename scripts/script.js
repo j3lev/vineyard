@@ -19,7 +19,7 @@ $.getJSON('scripts/inventory.json', function(response) {
             var field_label = document.createElement("label");
             field_label.innerText = attribute;
             form_field_container.appendChild(field_label);
-            form_field.className = "form-control field";
+            form_field.className = "form-control field-new";
             form_field.setAttribute("maxlength", "40");
             form_field.type = "text";
             form_field.id = "wine" + (response.length-1) + "-new-" + attribute;
@@ -90,7 +90,7 @@ function addNew(wine, i) {
             var field_label = document.createElement("label");
             field_label.innerText = attribute;
             form_field_container.appendChild(field_label);
-            form_field.className = "form-control field";
+            form_field.className = "form-control field-edit";
             form_field.setAttribute("maxlength", "40");
             form_field.type = "text";
             form_field.id = wine_id + "-edit-" + attribute;
@@ -104,7 +104,7 @@ function addNew(wine, i) {
     delete_btn.addEventListener("click", function() {
         var x = document.getElementById(this.parentNode.parentNode.parentNode.id);
         document.getElementById("wines-list").removeChild(x);
-    });
+     });
 
     for (var attribute in wine[i]) {
         if (attribute == "Color" || attribute == "Name") continue;
@@ -137,12 +137,12 @@ function addNew(wine, i) {
 }
 
 function addSubmit(wineJSON, btnID) {
-    
+    if (btnID == "#new-submit") var submitType = "field-new";
+    else var submitType = "field-edit";
     document.querySelector(btnID).addEventListener("click", function() {
-
-        fields = document.getElementsByClassName("field");
+        fields = document.getElementsByClassName(submitType);
         for (var i = 0; i < fields.length; i++) {
-            var panel_field = document.getElementsByClassName("field")[i];
+            var panel_field = document.getElementsByClassName(submitType)[i];
             var attribute = panel_field.id.split("-")[2];
             var wineID = panel_field.id.split("-")[0];
             var wineIDint = parseInt(wineID[4]);
@@ -151,8 +151,6 @@ function addSubmit(wineJSON, btnID) {
             document.querySelector("#" + wineID + "-" + attribute).innerText = fields[i].value;
         }
     });
-
-
 }
 
 function createNew() {
@@ -171,5 +169,5 @@ function createNew() {
     }
 
     return new_wine;
-
 }
+
